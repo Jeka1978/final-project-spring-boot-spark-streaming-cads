@@ -11,6 +11,12 @@ class StringExtensionsTest {
 
   @Test
   def testIsBlankIsWorkingOnNullString():Unit={
+
+    var s="java"
+    s.toUpperCase
+    s.isBlank
+
+
     var str = ""
     str = null
     Assert.assertTrue(str.isBlank)

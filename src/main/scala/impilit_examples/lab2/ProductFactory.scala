@@ -1,7 +1,5 @@
 package impilit_examples.lab2
 
-import java.util
-
 import org.reflections.Reflections
 
 import scala.collection.JavaConversions._
@@ -21,37 +19,20 @@ object ProductFactory {
   }
 
 
+  def generateProducts(amount: Int): List[Costable] = {
+    (1 to amount).map(_ => generateProduct()).toList
+  }
 
 
-
-  def generateProduct():Costable={
+  def generateProduct(): Costable = {
     import RegistryAdditionalListMethods._
     costableClasses.getRandomItem().getConstructor(classOf[Int]).newInstance(new Integer(12))
   }
 
   def main(args: Array[String]): Unit = {
-    println(generateProduct())
-    println(generateProduct())
-    println(generateProduct())
-    println(generateProduct())
-    println(generateProduct())
+    (1 to 10).foreach(_ => println(generateProduct()))
 
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
