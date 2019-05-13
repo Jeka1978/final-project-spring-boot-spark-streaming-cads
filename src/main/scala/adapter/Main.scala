@@ -8,6 +8,6 @@ object Main {
 
   def main(args: Array[String]): Unit = {
     val costable: Costable = ProductGenerator.generate()
-    Calc.printPrice(costable)
+//    Calc.printPrice(costable)
   }
 }
