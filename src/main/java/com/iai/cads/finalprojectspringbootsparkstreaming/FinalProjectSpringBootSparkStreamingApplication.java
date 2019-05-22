@@ -8,7 +8,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class FinalProjectSpringBootSparkStreamingApplication {
 
     public static void main(String[] args) {
-      SpringApplication.run(FinalProjectSpringBootSparkStreamingApplication.class, args);
+        ConfigurableApplicationContext context =
+                SpringApplication.run(FinalProjectSpringBootSparkStreamingApplication.class, args);
+        System.out.println();
     }
 
 }
