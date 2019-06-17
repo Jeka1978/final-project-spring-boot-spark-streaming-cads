@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.Wither;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author Evgeny Borisov
@@ -14,7 +15,7 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Productum {
+public class Productum implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;
